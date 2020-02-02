@@ -20,10 +20,11 @@ console.log(`the rounded price is ${roundedPrice}.`);
 const roundedTotalPrice = Math.ceil(totalPrice / 100) * 100;
 console.log(`the rounded total price is ${roundedTotalPrice}.`);
 
-const isEven = !!(Math.floor(totalPrice) % 2 === 0);
+const isEven = Math.floor(totalPrice) % 2 === 0;
 console.log(`the total price is even: ${isEven}.`);
 
-const changeFrom500 = 500 - parseFloat(totalPrice.toFixed(2));
+const money500 = 500;
+const changeFrom500 = money500 - parseFloat(totalPrice.toFixed(2));
 console.log(`the change form 500 will be: ${changeFrom500}.`);
 
 const avarage = (milkPrice + nutellaPrice + cakePrice) / 3;
