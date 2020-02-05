@@ -1,10 +1,10 @@
-let numberN = +prompt('Enter a start number, please');
+let numberN = +prompt('Enter a start number, please', '10');
 while(!Number.isInteger(numberN)){
-    numberN = +prompt('Enter an integer start number, please');
+    numberN = +prompt('Enter an integer start number, please', '10');
 }
-let numberM = +prompt('Enter a final number, please');
+let numberM = +prompt('Enter a final number, please', '100');
 while (!Number.isInteger(numberM)) {
-    numberM = +prompt('Enter an integer final number, please');
+    numberM = +prompt('Enter an integer final number, please', '100');
 }
 
 if(numberN > numberM){
