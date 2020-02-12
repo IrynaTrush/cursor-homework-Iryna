@@ -21,8 +21,8 @@ console.log("Result of the pow function: " + powNumber(0, 3));
 // function 3
 let userName = 'ivAn';
 function uppercaseFirstLetter (name) {
-   let firstLetter = name[0].toUpperCase();
-   let lastPart = name.slice(1).toLowerCase();
+  const firstLetter = name[0].toUpperCase();
+   const lastPart = name.slice(1).toLowerCase();
    return firstLetter + lastPart;
 }
 console.log("Result of the uppercaseFirstLetter function: " + uppercaseFirstLetter(userName));
@@ -59,12 +59,12 @@ function convertCurrency (currency) {
    const baks = "$";
    const grn = "UAH";
    let converted;
-   if (currency.includes('uah')||currency.includes('UAH')){
+   if (currency.toLowerCase().includes('uah')){
       converted = (parseInt(currency) / 25) + baks;
    } else if (currency.includes('$')){
       converted = (parseInt(currency) * 25) + grn;
    }else{
-      converted = "error";
+      throw new Error('Invalid currency');
    }
    return converted;
 }
@@ -96,8 +96,7 @@ console.log("Result of the deleteLetters function: " + deleteLetters('a', "blabl
 
 //function 10
 function isPalyndrom (word) {
-   let result = true;
-   for (let i = 0; i < (word.length / 2); i++) {
+    for (let i = 0; i < (word.length / 2); i++) {
       let leftChar = word[i];
       let rightChar = word[word.length - (i + 1)];
       if (leftChar !== rightChar) {
