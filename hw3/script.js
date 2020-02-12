@@ -103,7 +103,7 @@ function isPalyndrom (word) {
          return false;
       }
    }
-   return result;
+   return true;
 }
 console.log ("Result of the isPalyndrom function: " + isPalyndrom('madam'));
 
