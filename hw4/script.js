@@ -41,7 +41,7 @@ console.log(journal(newArr, marks));
 // task 4
 const randomMark = (min, max) =>  Math.floor(Math.random() * (max - min + 1)) + min;
 const from1To5 = randomMark(1, 5);
-console.log(from1To5);
+
 function exam (pairs, subjects) {
     let result = [];
     for (let i = 0; i < pairs.length; i++) {
