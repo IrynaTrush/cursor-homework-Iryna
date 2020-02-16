@@ -3,7 +3,7 @@ const themes = ["Дифференциальные уравнения", "Теор
 const marks = [4, 5, 5, 3, 4, 5];
  
 // task 1
-let newArr = [...students];
+const newArr = [...students];
 newArr[1] = "Лена";
 newArr[2] = "Игорь";
 
@@ -20,7 +20,7 @@ const couples = pairs(newArr);
 
 // task 2
 function subjects (pairs, subject) {
-let themesWithPairs = [];
+const themesWithPairs = [];
  for (let i = 0; i < pairs.length; i ++) {
     themesWithPairs.push([pairs[i][0] + ' и ' + pairs[i][1], subject[i]]);
  }
@@ -30,7 +30,7 @@ console.log(subjects(couples, themes));
 
 // task 3
 function journal (students, marks) {
-    let result = [];
+    const result = [];
     for (let i = 0; i < students.length; i++) {
         result.push([students[i], marks[i]]);
     }
@@ -43,7 +43,7 @@ const randomMark = (min, max) =>  Math.floor(Math.random() * (max - min + 1)) + 
 const from1To5 = randomMark(1, 5);
 
 function exam (pairs, subjects) {
-    let result = [];
+    const result = [];
     for (let i = 0; i < pairs.length; i++) {
         result.push([pairs[i][0] + ' и ' + pairs[i][1], subjects[i], randomMark(1, 5)]);
     }
