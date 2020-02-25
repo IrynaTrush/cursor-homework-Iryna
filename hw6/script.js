@@ -25,20 +25,18 @@ const students = [{
   }];
 
   // task 1 
-  const getSubjects = (array, index) => {
-    const allNames = students.map(el => Object.values(el.name));
-    const properName = allNames[index].join('');
-    const allSubjects = students.map(el => Object.keys(el.subjects));
-    const properSubjects = allSubjects[index];
-    const preformated = properSubjects.map(el => (el.charAt(0).toUpperCase()+el.slice(1)).replace('_', ' '));
-   return `${properName} has these subjects: ${preformated[0]}, ${preformated[1]} and ${preformated[2]}`;
+  const getSubjects = (student) => {
+    const {subjects} = student;
+    const casedUp = Object.keys(subjects).map(subject => subject[0].toUpperCase() + subject.slice(1).toLowerCase());
+    return casedUp.map(subject => subject.split('_').join(' '));
   }
-  console.log(`Result of the getSubjects function is: ${getSubjects(students, 0)}`);
+  console.log(`Result of the getSubjects function is: ${getSubjects(students[0])}`);
  
   // task 2
-  let[firstStudent] = students;
+  
   const getAverageMark = (student) => {
-  let values = Object.values(firstStudent.subjects).flatMap(el => el);
+    const {subjects} = student;
+  const values = Object.values(student.subjects).flatMap(el => el);
   return (values.flatMap(el => el).reduce((a , b) => a + b ) / values.length).toFixed(2);
   }
   console.log(`Result of the getAverageMark function is ${getAverageMark(students[0])}`);
@@ -63,21 +61,14 @@ console.log(`Result of the getStudentNames function is: ${getStudentsNames(stude
 
 // task 5
 const getBestStudent = (students) => {
-  let result = 0;
- let theBestStudent = students.map(el => getStudentInfo(el)).reduce((ac, item) => {
-    if(result < item.averageMark) {
-     ac = item.name;
-    }
-    return ac;
- }, '');
-return theBestStudent;
+  return students.reduce((curr, prev) => getAverageMark(curr) > getAverageMark(prev) ? curr : prev ).name;
 }
 console.log(`Result of the getBestStudent function is: ${getBestStudent(students)}`);
 
 
 // task 6
 const calculateWordLetters = (str) => {
- let result = {};
+ const result = {};
   for (let i = 0; i < str.length; i++) {
     const item = str[i];
     if (!result[item]) {
