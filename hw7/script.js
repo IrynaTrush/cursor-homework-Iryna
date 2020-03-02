@@ -22,7 +22,7 @@ console.log(`Result of the getMiddleTaxes is : ${getMiddleTaxes.call(ukraine)}`)
 function getTotalTaxes() {
     return this.tax * this.middleSalary * this.vacancies;
 }
-console.log(`Result of the getTotalTaxes function is: ${getTotalTaxes.call(ukraine)}`);
+console.log(`Result of the getTotalTaxes function is: ${getTotalTaxes.call(ukraine)} for Ukraine, ${getTotalTaxes.call(latvia)} for Latvia and ${getTotalTaxes.call(litva)} for Litva`);
 
 // task 4
 
@@ -32,11 +32,11 @@ function getMySalary(country) {
 const minSalary = 1500;
 const maxSalary = 2000;
 result.salary = Math.floor(minSalary + Math.random() * (maxSalary - minSalary + 1));
-result.taxes = this.tax
-result.profit = result.salary - this.tax;
+result.taxes = country.tax
+result.profit = result.salary - country.tax;
 console.log(result);
     }, 10000);
 }
 
-getMySalary.call(ukraine);
+getMySalary(ukraine);
 
