@@ -12,16 +12,14 @@ class Student {
     get marks() {
         if (this.isExpelled) {
             return null;
-        } else {
-            return this.allMarks;
-        }
+        } 
+        return this.allMarks;
     }
     set marks(value) {
         if(this.isExpelled) {
             return null;
-        } else {
-            return this.allMarks.push(value);
-        }
+        } 
+        return this.allMarks.push(value);
     }
     getAverageMark() {
         return (this.allMarks.reduce((sum, item) => sum += item, 0)) / this.allMarks.length;
@@ -53,9 +51,8 @@ class BudgetStudent extends Student {
         const averageMark = 4;
         if((!this.isActive)&&(this.getAverageMark() >= averageMark)){
             return `отримали 1400 грн стипендії`;
-        } else {
-            return `не отримали стипендії`;
-        }
+        } 
+        return `не отримали стипендії`;
     }
 }
 
