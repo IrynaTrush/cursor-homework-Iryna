@@ -1,0 +1,24 @@
+body {
+    height: 100vh;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(252,236,252,1) 0%, rgba(251,166,225,0.92) 32%, rgba(251,166,225,0.91) 37%, rgba(251,166,225,0.88) 50%, rgba(188,224,238,0.75) 100%) no-repeat 100% 100%;
+}
+.container-wrapper {
+    height: 250px;
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 100px auto;
+}
+
+.random {
+    width: 50px;
+    height: 50px;
+}
+
+h1 {
+    font-family: 'Cabin Sketch', cursive;
+    font-weight: bold;
+    font-size: 40px;
+    color: lightseagreen;
+}
