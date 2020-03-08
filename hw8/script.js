@@ -42,17 +42,17 @@ console.log (
 // Advanced
 
 class BudgetStudent extends Student {
-    constructor(arrOfMarks) {
+    constructor(arrOfMarks, university, course, fullName) {
         super();
         this.allMarks = arrOfMarks;
-        setInterval(() => console.log(this.getScholarship()), 3e5);
+        setInterval(() => console.log(this.getScholarship()), 30000);
     }
     getScholarship() {
         const averageMark = 4;
         if((!this.isActive)&&(this.getAverageMark() >= averageMark)){
-            return `отримали 1400 грн стипендії`;
+            return `студент отримав 1400 грн стипендії`;
         } 
-        return `не отримали стипендії`;
+        return `студент не отримав стипендії`;
     }
 }
 
@@ -60,9 +60,9 @@ const withMoney = new BudgetStudent ([5, 4, 4, 5, 5]);
 const withoutMoney = new BudgetStudent ([3, 3, 3, 3, 4]);
 
 console.log(
-    `Студенти, які мають середній бал більше 4, ${withMoney.getScholarship()}.`
+    `Якщо середній бал більше 4, ${withMoney.getScholarship()}.`
 );
 
 console.log(
-    `Студенти, які мають середній бал менше 4, ${withoutMoney.getScholarship()}.`
+    `Якщо середній бал менше 4, ${withoutMoney.getScholarship()}.`
 );
