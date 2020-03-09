@@ -43,7 +43,7 @@ console.log (
 
 class BudgetStudent extends Student {
     constructor(arrOfMarks, university, course, fullName) {
-        super();
+        super(university, course, fullName);
         this.allMarks = arrOfMarks;
         setInterval(() => console.log(this.getScholarship()), 30000);
     }
