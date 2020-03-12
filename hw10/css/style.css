@@ -1,0 +1,105 @@
+body {
+    height: 100vh;
+    background: url(../image/rock.jpeg) no-repeat ;
+    background-size: cover;
+    position: relative;
+}
+
+.wrapper {
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    width: 100%;
+    color: #fff;
+}
+
+.first-layer {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.second-layer {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+}
+h1 {
+    font-family: 'Sigmar One', cursive;
+    color: #000;
+    font-size: 40px;
+    text-align: center;
+}
+
+.item {
+    font-size: 20px;
+    font-weight: bold;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    padding-top: 15px;
+    border: #2e2e1f 1px solid;
+    box-shadow: inset 5px 5px 3px #ec9,
+      4px 2px 10px 3px rgba(0,0,0,0.3);
+    
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50% 100%;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 100% 50%;
+    
+    transform: rotate(45deg);
+  
+    padding: 10px;
+}
+
+.item:hover {
+    transform: scale(1.1) rotate(45deg);
+    transition: all 0.3s;
+   }
+
+.second-layer > .item + .item {
+    margin-left: 50px;
+}
+
+.item1 {
+    background: url(../image/aerials.jpg) ;
+    background-size: contain;
+}
+
+.item2 {
+    background: url(../image/f5677ba424b74befa09a282dde15f49c.jpg);
+    background-size: contain;
+}
+
+.item3 {
+    background: url(../image/byob.jpg);
+    background-size: contain;
+}
+
+.item4 {
+    background: url(../image/lonelyday.png);
+    background-size: contain;
+}
+
+.item5 {
+    background: url(../image/shop.png);
+    background-size: contain;
+}
+
+.item6 {
+    background: url(../image/spiders.jpg);
+    background-size: contain;
+}
+
+.item7 {
+    background: url(../image/toxicity.jpg);
+    background-size: contain;
+}
+
+.letter {
+    display: block;
+    transform: rotate(-45deg) translate(-25px, 90px);
+}
