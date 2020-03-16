@@ -14,6 +14,8 @@ document.addEventListener('keydown', e => {
     if(itemIndex > -1) playList(items[itemIndex]);
 });
 
+let song = null;
+
 function playList(item) {
     let song = document.getElementById(item.dataset.note);
     song.play();
