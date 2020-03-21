@@ -43,7 +43,8 @@ async function getCharacters() {
        container.append(infoCharacter);
        infoCharacter.classList.add('user')
        });
-    })
+      
+})
 }
 
 
@@ -81,12 +82,13 @@ function renderPlanets (planets) {
     })
 
     next.addEventListener('click', async function () {
-        if (currentPage === 6) {
-            next.style.display = 'none';
+        if (currentPage == 1) {
+            next.style.display = 'block';
+            previous.style.display = 'block'
         }
-        if (currentPage >= 1) {
-            previous.style.display = 'block';  
-        } 
+        if (currentPage == 6 ) {
+            next.style.display = 'none'
+        }
         currentPage += 1;
         container.innerHTML = '';
         await getPlanets(currentPage).then(renderPlanets);
@@ -94,6 +96,12 @@ function renderPlanets (planets) {
 
     previous.addEventListener('click', async function () {
         currentPage -= 1;
+        if(currentPage == 1) {
+           previous.style.display = 'none'
+        }
+        if (currentPage <= 6) {
+            next.style.display = 'block'
+        }
         container.innerHTML = '';
         await getPlanets(currentPage).then(renderPlanets);
     })
