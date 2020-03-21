@@ -1,10 +1,9 @@
-function generateSign(length){
-    const time = length * 4;
+function generateSign(){
     return new Promise(resolve => {
       setTimeout(() =>{
         const sign = Date.now().toString().split('').reverse().slice(0,5).join('');  
         resolve(String.fromCharCode(sign));
-      }, time);
+      }, 200);
     });
 }
   
