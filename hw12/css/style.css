@@ -1,0 +1,91 @@
+body {
+    background: url('../images/Star-Wars.jpg') no-repeat;
+    background-size: cover;
+}
+
+.users{
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: center;
+   padding-top: 60px;
+}
+.user:hover {
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+.user {
+    width: 200px;
+    background-color:  #9999ff;
+    border-radius: 10px;
+    opacity: 0.9;
+    text-align: center;
+    box-shadow: 5px 5px 10px #00004d;
+    margin: 20px 40px;
+    padding: 10px;
+    font-family: 'Audiowide', cursive;
+    font-size: 25px;
+    text-shadow: 5px 5px 5px  #000066;
+   
+}
+.photo {
+    width: 180px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 15px #000066;
+}
+
+.btn {
+   padding: 15px 40px;
+   border-radius: 15px;
+   box-shadow: 5px 5px 10px  #8080ff;
+   font-size: 20px;
+    width: 150px;
+    background-color: #00004d;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    
+}
+.btn:hover {
+   transform: scale(1.1);
+   transition: all 0.3s;
+}
+.btn_wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+.btn_wrapper > .btn + .btn {
+    margin-left: 30px;
+}
+
+.planets_wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.planetItem {
+    color: #b3b3cc;
+    font-family: 'Audiowide', cursive;
+    font-size: 25px;
+    text-shadow: 5px 5px 5px  #000066;
+}
+.next_wrapper {
+    display: flex;  
+}
+
+.next {
+    display: none;
+    margin-left: 30px;
+}
+
+.previous {
+    display: none;
+}
+
+.navigationPlanet {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
